@@ -1,0 +1,34 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Plugins
+Plug 'tpope/vim-surround'
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+"" Activate vim helper plugin
+set which-key
+set notimeout
+set timeoutlen=5000
+
+"" Set relative line numbers
+:set relativenumber
+
+" Use the system clipboard for all yank, delete, change, and put operations
+set clipboard+=unnamedplus
+
+" Set hotkeys to switch between tabs on current group
+map <A-[> gT
+map <A-]> gt
+map <A-S-[> <Action>(NextTabGroup)
+map <A-S-]> <Action>(PreviousTabGroup)
