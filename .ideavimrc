@@ -27,8 +27,19 @@ set timeoutlen=5000
 " Use the system clipboard for all yank, delete, change, and put operations
 set clipboard+=unnamedplus
 
-" Set hotkeys to switch between tabs on current group
+" Remaps
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 map <A-[> gT
 map <A-]> gt
-map <A-S-[> <Action>(NextTabGroup)
-map <A-S-]> <Action>(PreviousTabGroup)
+
+nnoremap <leader>O O<ESC>O
+nnoremap <leader>o o<cr>
+
+nnoremap <leader>j ddjP
+nnoremap <leader>k ddkP
+
+" clang format
+autocmd BufWritePre *.cpp,*.h :silent! !clang-format -i %
+nnoremap <leader>f :!clang-format -i %<CR>
