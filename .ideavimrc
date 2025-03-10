@@ -40,6 +40,8 @@ nnoremap <leader>o o<cr>
 nnoremap <leader>j ddjP
 nnoremap <leader>k ddkP
 
+nmap <Leader>e :action ShowErrorDescription<CR>
+
 " clang format
 autocmd BufWritePre *.cpp,*.h :silent! !clang-format -i %
 nnoremap <leader>f :!clang-format -i %<CR>
